@@ -1,0 +1,2 @@
+WERKZEUGREQUESTTIMESTAMP %{MONTHDAY}/%{MONTH}/%{YEAR} %{TIME}
+ODOOLOG %{TIMESTAMP_ISO8601:timestamp} %{POSINT:pid} %{LOGLEVEL:level} (?:%{USERNAME:user}|\?) %{PROG:module}: (?:%{IPORHOST:client} %{USER:ident} %{USER:auth} \[%{WERKZEUGREQUESTTIMESTAMP:request_timestamp}\] \"%{WORD:request_type} %{URIPATHPARAM:request} HTTP/%{NUMBER:httpversion}\" %{NUMBER:response} -|%{GREEDYDATA})
